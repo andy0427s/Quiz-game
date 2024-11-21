@@ -6,20 +6,35 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { LogIn, Plus, Users } from 'lucide-react'
+import {requestJoinGame} from "@/api/game.api.js";
+import {useGameStore} from "@/store/store.js";
+import {toast} from "react-toastify";
 
 export default function QuizGamePortal() {
   const [gamePin, setGamePin] = useState('')
   const [playerName, setPlayerName] = useState('')
   const navigate = useNavigate();
+  const { setUserId, setGameData } = useGameStore();
 
   const handleCreateGame = () => {
     console.log('Creating new game...');
     navigate('/create-game');
   }
 
-  const handleJoinGame = () => {
-    console.log(`Joining game with PIN: ${gamePin}, Player: ${playerName}`);
-    navigate(`/player-lobby?pin=${gamePin}&name=${playerName}`);
+  const handleJoinGame = async () => {
+    try {
+      const result = await requestJoinGame({
+        username: playerName,
+        pin: gamePin
+      });
+      const gameData = result.data.gameData;
+      const userId = result.data.userId;
+      setUserId(userId);
+      setGameData(gameData);
+      navigate(`/lobby/${gameData._id}`);
+    } catch (error) {
+      toast.warning(error.response.data.message);
+    }
   }
 
   return (

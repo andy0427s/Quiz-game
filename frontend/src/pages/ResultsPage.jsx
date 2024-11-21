@@ -4,16 +4,14 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Trophy, Medal, Home } from 'lucide-react'
+import {useGameStore} from "@/store/store.js";
 
 export default function ResultsPage() {
+
+  const { gameData } = useGameStore();
   const location = useLocation();
   const navigate = useNavigate();
   const { leaderboard, gameName, totalQuestions } = location.state || {};
-
-  const results = leaderboard || [
-    { team: "Team A", score: 1500, position: 1 },
-    { team: "Team B", score: 1200, position: 2 },
-  ];
 
   const getIcon = (position) => {
     switch (position) {
@@ -24,6 +22,12 @@ export default function ResultsPage() {
     }
   }
 
+  if (!gameData) {
+    return null;
+  }
+
+  const teamsScore = gameData.teamsScore.sort((a, b) => b.score - a.score);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-600 to-indigo-800 flex items-center justify-center p-4">
       <Card className="w-full max-w-2xl bg-slate-800/90 backdrop-blur-md border-none text-slate-100">
@@ -33,7 +37,7 @@ export default function ResultsPage() {
           {totalQuestions && <p className="text-lg text-center text-slate-300 mt-1">Total Questions: {totalQuestions}</p>}
         </CardHeader>
         <CardContent className="space-y-6">
-          {results.map((result, index) => (
+          {teamsScore.map((result, index) => (
             <motion.div
               key={result.team}
               initial={{ opacity: 0, y: 20 }}
