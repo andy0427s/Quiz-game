@@ -6,6 +6,7 @@ import {Send, Trophy} from "lucide-react";
 import {motion} from "framer-motion";
 import React, {useRef, useState} from "react";
 import {useGameStore} from "@/store/store.js";
+import {toast} from "react-toastify";
 
 
 const ChatRoom = () => {
@@ -13,7 +14,10 @@ const ChatRoom = () => {
     const [currentMessage, setCurrentMessage] = useState('')
     const chatRef = useRef(null);
     const handleSendMessage = () => {
-
+        if (!currentMessage) {
+            toast.warn('Please type a message');
+            return;
+        }
         try {
             const sendMessageEvent = new CustomEvent('sendMessage', {
                 detail: {
