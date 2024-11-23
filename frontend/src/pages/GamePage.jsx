@@ -11,7 +11,7 @@ import { Users, Play, CheckCircle, Send, CircleCheckBig, CircleX } from 'lucide-
 import {requestAnswer} from "@/api/game.api.js";
 const colors = ['bg-red-500', 'bg-blue-500', 'bg-pink-500', 'bg-yellow-500']
 export default function GamePage() {
-  const { gameData, userId, setShowLoading } = useGameStore();
+  const { gameData, userId, setShowLoading, setTeamMessages } = useGameStore();
   const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState(null);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -32,6 +32,10 @@ export default function GamePage() {
       setShowLoading(false);
     }
   }
+
+  useEffect(() => {
+    setTeamMessages([]);
+  }, []);
 
   useEffect(() => {
     let timer = null;
