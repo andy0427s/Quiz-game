@@ -1,0 +1,199 @@
+[
+    {
+      "text": "Who developed Python Programming Language?",
+      "options": [
+        "Wick van Rossum",
+        "Rasmus Lerdorf",
+        "Guido van Rossum",
+        "Niene Stom"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "text": "Which type of Programming does Python support?",
+      "options": [
+        "object-oriented programming",
+        "structured programming",
+        "functional programming",
+        "all of the mentioned"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "text": "Is Python case sensitive when dealing with identifiers?",
+      "options": ["no", "yes", "machine dependent", "none of the mentioned"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "Which of the following is the correct extension of the Python file?",
+      "options": [".python", ".pl", ".py", ".p"],
+      "correctAnswer": 2
+    },
+    {
+      "text": "Is Python code compiled or interpreted?",
+      "options": [
+        "Both compiled and interpreted",
+        "Neither compiled nor interpreted",
+        "Only compiled",
+        "Only interpreted"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "text": "All keywords in Python are in ________",
+      "options": ["Capitalized", "lower case", "UPPER CASE", "None of the mentioned"],
+      "correctAnswer": 3
+    },
+    {
+      "text": "Which of the following is used to define a block of code in Python language?",
+      "options": ["Indentation", "Key", "Brackets", "All of the mentioned"],
+      "correctAnswer": 0
+    },
+    {
+      "text": "Which keyword is used for function in Python language?",
+      "options": ["Function", "def", "Fun", "Define"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "Which of the following character is used to give single-line comments in Python?",
+      "options": ["//", "#", "!", "/*"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "Which of the following functions can help us to find the version of python that we are currently working on?",
+      "options": ["sys.version(1)", "sys.version(0)", "sys.version()", "sys.version"],
+      "correctAnswer": 2
+    },
+    {
+      "text": "Python supports the creation of anonymous functions at runtime, using a construct called __________",
+      "options": ["pi", "anonymous", "lambda", "none of the mentioned"],
+      "correctAnswer": 2
+    },
+    {
+      "text": "What does pip stand for python?",
+      "options": [
+        "Pip Installs Python",
+        "Pip Installs Packages",
+        "Preferred Installer Program",
+        "All of the mentioned"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "text": "Which of the following is the truncation division operator in Python?",
+      "options": ["|", "//", "/", "%"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "Which of the following functions is a built-in function in python?",
+      "options": ["factorial()", "print()", "seed()", "sqrt()"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "Which one of the following is not a keyword in Python language?",
+      "options": ["pass", "eval", "assert", "nonlocal"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "Which module in the python standard library parses options received from the command line?",
+      "options": ["getarg", "getopt", "main", "os"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "What arithmetic operators cannot be used with strings in Python?",
+      "options": ["*", "-", "+", "All of the mentioned"],
+      "correctAnswer": 1
+    },
+    {
+      "text": "Which of the following statements is used to create an empty set in Python?",
+      "options": ["( )", "[ ]", "{ }", "set()"],
+      "correctAnswer": 3
+    },
+    {
+      "text": "To add a new element to a list we use which Python command?",
+      "options": [
+        "list1.addEnd(5)",
+        "list1.addLast(5)",
+        "list1.append(5)",
+        "list1.add(5)"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "text": "What is the maximum possible length of an identifier in Python?",
+      "options": ["79 characters", "31 characters", "63 characters", "none of the mentioned"],
+      "correctAnswer": 3
+    },
+    {
+      "text": "Which of the following is a Python tuple?",
+      "options": ["{1, 2, 3}", "{}", "[1, 2, 3]", "(1, 2, 3)"],
+      "correctAnswer": 3
+    },
+    {
+      "text": "What will be the output of the following Python expression?\n\nround(4.576)",
+      "options": ["4", "4.6", "5", "4.5"],
+      "correctAnswer": 2
+    },
+    {
+        "text": "Which keyword is used for function?",
+        "options": [
+          "Fun",
+          "Define",
+          "def",
+          "Function"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "text": "To read two characters from a file object infile, we use ____________",
+        "options": [
+          "infile.read(2)",
+          "infile.read()",
+          "infile.readline()",
+          "infile.readlines()"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "text": "Which of the following is not a standard exception in Python?",
+        "options": [
+          "NameError",
+          "IOError",
+          "AssignmentError",
+          "ValueError"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "text": "Which of the following blocks will be executed whether an exception is thrown or not?",
+        "options": [
+          "except",
+          "else",
+          "finally",
+          "assert"
+        ],
+        "correctAnswer": 2
+      },
+      {
+        "text": "Which of these is not a core data type?",
+        "options": [
+          "Lists",
+          "Dictionary",
+          "Tuples",
+          "Class"
+        ],
+        "correctAnswer": 3
+      },
+      {
+        "text": "What arithmetic operators cannot be used with strings?",
+        "options": [
+          "+",
+          "*",
+          "–",
+          "All of the mentioned"
+        ],
+        "correctAnswer": 2
+      }
+  ]
+  
+
