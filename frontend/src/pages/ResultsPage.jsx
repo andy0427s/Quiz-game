@@ -61,6 +61,16 @@ export default function ResultsPage() {
               Back to Home
             </Button>
           </div>
+          <div className="flex justify-center mt-4">
+            <a
+              href="https://forms.office.com/e/0KrGt7GMgq"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-300 hover:text-teal-400 underline font-semibold text-lg"
+            >
+              Please provide feedback to us
+            </a>
+          </div>
         </CardContent>
       </Card>
     </div>
